@@ -1,17 +1,21 @@
 # Leaflet.PointInPolygon
+
+This is the CityOfPhiladelphia fork of Leaflet.PointInPolygon.  We had to have our own fork, so that we could add a dummy package.json file.  It does not actually make this a package, but it makes node npm install the repo correctly.
+
+
 <a href="https://github.com/hayeswise/Leaflet.PointInPolygon/blob/master/LICENSE"><img align="right" src="https://img.shields.io/badge/license-MIT-blue.svg"></a><br/>
 <img align="left" src="https://github.com/hayeswise/Leaflet.PointInPolygon/blob/master/PiPwn-logo.png?raw=true">
-Leaflet.PointInPolygon is a [Leaflet](http://leafletjs.com/) plugin/extension that provides point-in-polygon functions 
+Leaflet.PointInPolygon is a [Leaflet](http://leafletjs.com/) plugin/extension that provides point-in-polygon functions
 based on Dan Sunday's C++ winding number implementation. Functions `contains()`, `getWindingNumber()`, and `isLeft()` extend
 Leaflet classes `L.Polygon`, `L.Polyline`, and `L.LatLng`.
 <a href="http://leafletjs.com/"><img align="right" src="https://s3.amazonaws.com/uploads.uservoice.com/logo/design_setting/94572/original/leaflet-logo.png?1329832491"></a>
-The winding number method has an advantage to the crossing number method since 
-"the winding number accurately determines if a point is inside a nonsimple closed polygon" 
+The winding number method has an advantage to the crossing number method since
+"the winding number accurately determines if a point is inside a nonsimple closed polygon"
 (See [Inclusion of a Point in Polygon](http://geomalgorithms.com/a03-_inclusion.html) by Dan Sunday).
 
 Unlike the C++ implementation,
 points on the lines and vertices are considered as being included in the polygon.  As such, the `getWindingNumber()` function will
-work for a polyline. The inclusiveness of points on the the polygon lines (and polylines) has a natural interpretation for 
+work for a polyline. The inclusiveness of points on the the polygon lines (and polylines) has a natural interpretation for
 locations on maps.  A future version of Leaflet.PointInPolygon will support the ability to be inclusive or exclusive.
 
 # Requirements
@@ -22,8 +26,8 @@ Demo on JSFiddle: [Leaflet.PointInPolygon Demo](https://jsfiddle.net/hayeswise/b
 
 [![Leaflet.PointInPolygon Demo screen shot] (https://raw.githubusercontent.com/hayeswise/Leaflet.PointInPolygon/master/DemoScreenShot.PNG)](https://jsfiddle.net/hayeswise/bh2wuve8/embedded/result,html,js,css) (Clickable image)
 
-Leaflet.PointInPolygon is plugin was Originally developed for the [Ingress Intel Total Conversion](https://iitc.me/)(IITC). 
-If you have a [Ingress](https://ingress.com/) account, install the Ingress Intel Total Conversion desktop and 
+Leaflet.PointInPolygon is plugin was Originally developed for the [Ingress Intel Total Conversion](https://iitc.me/)(IITC).
+If you have a [Ingress](https://ingress.com/) account, install the Ingress Intel Total Conversion desktop and
 the install the [Portals-in-Polygons](https://github.com/hayeswise/iitc-portalsinpolygons) plugin.
 
 ![Portals-in-polygons UI screen shot](https://github.com/hayeswise/iitc-portalsinpolygons/blob/master/docs/portals-in-polygons-ui.png?raw=true)
@@ -64,7 +68,7 @@ var polygon = L.polygon([
 ]).addTo(mymap);
 var m1 = L.marker([51.515, -0.07]); // Outside and north of polygon
 var m2 = L.marker([51.506, -0.06]); // In polygon, not on border
-var m2 = L.marker([51.505, -0.074]); // Inside polygon boundary box but outside of polygon. 
+var m2 = L.marker([51.505, -0.074]); // Inside polygon boundary box but outside of polygon.
 var m2 = L.marker([51.51, -0.067]); // On polygon border.
 
 console.log(polygon.contains(m1.getLatLng()));
