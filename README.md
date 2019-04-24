@@ -2,6 +2,8 @@
 
 This is the CityOfPhiladelphia fork of Leaflet.PointInPolygon.  We had to have our own fork, so that we could add a dummy package.json file.  It does not actually make this a package, but it makes node npm install the repo correctly.
 
+There is more information about all forked repos in the [phila-vue-mapping wiki](https://github.com/CityOfPhiladelphia/phila-vue-mapping/wiki/ForkedDependencies)
+
 
 <a href="https://github.com/hayeswise/Leaflet.PointInPolygon/blob/master/LICENSE"><img align="right" src="https://img.shields.io/badge/license-MIT-blue.svg"></a><br/>
 <img align="left" src="https://github.com/hayeswise/Leaflet.PointInPolygon/blob/master/PiPwn-logo.png?raw=true">
